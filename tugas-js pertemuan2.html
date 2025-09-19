@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tugas 2 - Data Pegawai</title>
+</head>
+<body>
+  <h2>Data Pegawai</h2>
+
+  <script>
+    // Data pegawai (langsung isi variabel)
+    let nama = "dodi prayodi";
+    let umur = 25;
+    let jabatan = "manajer";
+    let status = "menikah";
+
+    // Gaji pokok (pakai if)
+    let gapok = 0;
+    if (jabatan === "manajer") {
+      gapok = 15000000;
+    } else if (jabatan === "asisten manajer") {
+      gapok = 10000000;
+    } else if (jabatan === "staff") {
+      gapok = 5000000;
+    }
+
+    // Tunjangan jabatan = 15% dari gaji pokok
+    let tunjanganJabatan = 0.15 * gapok;
+
+    // BPJS = 10% dari gaji pokok
+    let bpjs = 0.10 * gapok;
+
+    // Tunjangan keluarga (pakai ternary)
+    let tunjanganKeluarga = (status === "menikah") ? 0.20 * gapok : 0;
+
+    // Total gaji
+    let totalGaji = gapok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+    // Cetak tabel sederhana
+    document.write("<table border='1' cellspacing='0' cellpadding='5'>");
+
+    // thead
+    document.write("<thead><tr>");
+    document.write("<th>Nama Pegawai</th>");
+    document.write("<th>Umur</th>");
+    document.write("<th>Jabatan</th>");
+    document.write("<th>Status</th>");
+    document.write("<th>Gaji Pokok</th>");
+    document.write("<th>Tunjangan Jabatan</th>");
+    document.write("<th>BPJS</th>");
+    document.write("<th>Tunjangan Keluarga</th>");
+    document.write("</tr></thead>");
+
+    // tbody
+    document.write("<tbody><tr>");
+    document.write("<td>" + nama + "</td>");
+    document.write("<td>" + umur + "</td>");
+    document.write("<td>" + jabatan + "</td>");
+    document.write("<td>" + status + "</td>");
+    document.write("<td>" + gapok + "</td>");
+    document.write("<td>" + tunjanganJabatan + "</td>");
+    document.write("<td>" + bpjs + "</td>");
+    document.write("<td>" + tunjanganKeluarga + "</td>");
+    document.write("</tr></tbody>");
+
+    // tfoot
+    document.write("<tfoot><tr>");
+    document.write("<td colspan='7'><b>Total Gaji</b></td>");
+    document.write("<td><b>" + totalGaji + "</b></td>");
+    document.write("</tr></tfoot>");
+
+    document.write("</table>");
+  </script>
+</body>
+</html>

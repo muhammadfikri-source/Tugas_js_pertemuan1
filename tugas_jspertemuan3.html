@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tugas Pertemuan 3 - JS</title>
+</head>
+<body>
+  <h2>Sistem Manajemen Produk Toko</h2>
+
+  <script>
+    // Array awal produk toko
+    let produkToko = [
+      {id: 1, nama: "Laptop", harga: 7000000, stok: 5},
+      {id: 2, nama: "Mouse", harga: 200000, stok: 10},
+      {id: 3, nama: "Keyboard", harga: 350000, stok: 7}
+    ];
+
+    // Fungsi menampilkan produk
+    function tampilkanProduk() {
+      document.write("<h3>Daftar Produk Toko</h3>");
+      document.write("<table border='1' cellpadding='5' cellspacing='0'>");
+      document.write("<thead><tr><th>ID</th><th>Nama</th><th>Harga</th><th>Stok</th></tr></thead>");
+      document.write("<tbody>");
+      for (let i = 0; i < produkToko.length; i++) {
+        document.write("<tr>");
+        document.write("<td>" + produkToko[i].id + "</td>");
+        document.write("<td>" + produkToko[i].nama + "</td>");
+        document.write("<td>" + produkToko[i].harga + "</td>");
+        document.write("<td>" + produkToko[i].stok + "</td>");
+        document.write("</tr>");
+      }
+      document.write("</tbody></table><br>");
+    }
+
+    // Fungsi menambah produk
+    function tambahProduk(nama, harga, stok) {
+      let idBaru = produkToko.length > 0 ? produkToko[produkToko.length - 1].id + 1 : 1;
+      produkToko.push({id: idBaru, nama: nama, harga: harga, stok: stok});
+    }
+
+    // Fungsi menghapus produk berdasarkan id
+    function hapusProduk(id) {
+      for (let i = 0; i < produkToko.length; i++) {
+        if (produkToko[i].id === id) {
+          produkToko.splice(i, 1); // hapus 1 elemen pada index i
+          break;
+        }
+      }
+    }
+
+    // --- Testing ---
+    tampilkanProduk(); // tampilkan daftar awal
+
+    tambahProduk("Headset", 500000, 8); // tambah produk baru
+    document.write("<h4>Setelah tambah produk</h4>");
+    tampilkanProduk();
+
+    hapusProduk(2); // hapus produk id 2 (Mouse)
+    document.write("<h4>Setelah hapus produk id 2</h4>");
+    tampilkanProduk();
+  </script>
+</body>
+</html>

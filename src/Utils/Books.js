@@ -1,0 +1,77 @@
+// src/Utils/Books.js
+const books = [
+  {
+    id: 1,
+    title: "Laskar Pelangi",
+    author: "Andrea Hirata",
+    year: 2005,
+    description: "Kisah inspiratif anak-anak Belitong yang berjuang untuk sekolah.",
+    image: "https://placehold.co/150x200",
+  },
+  {
+    id: 2,
+    title: "Bumi Manusia",
+    author: "Pramoedya Ananta Toer",
+    year: 1980,
+    description: "Novel sejarah perjuangan Minke melawan penjajahan.",
+    image: "https://placehold.co/150x200",
+  },
+  {
+    id: 3,
+    title: "Negeri 5 Menara",
+    author: "Ahmad Fuadi",
+    year: 2009,
+    description: "Perjuangan santri di pondok pesantren dengan cita-cita tinggi.",
+    image: "https://placehold.co/150x200",
+  },
+  {
+    id: 4,
+    title: "Ayat-Ayat Cinta",
+    author: "Habiburrahman El Shirazy",
+    year: 2004,
+    description: "Kisah cinta dan perjuangan seorang mahasiswa Indonesia di Mesir.",
+    image: "https://placehold.co/150x200",
+  },
+  {
+    id: 5,
+    title: "Sang Pemimpi",
+    author: "Andrea Hirata",
+    year: 2006,
+    description: "Kisah dua pemimpi besar dari Belitong menuju Eropa.",
+    image: "https://placehold.co/150x200",
+  },
+  {
+    id: 6,
+    title: "Dilan 1990",
+    author: "Pidi Baiq",
+    year: 2014,
+    description: "Cerita cinta Dilan dan Milea yang populer di kalangan remaja.",
+    image: "https://placehold.co/150x200",
+  },
+  {
+    id: 7,
+    title: "Pulang",
+    author: "Leila S. Chudori",
+    year: 2012,
+    description: "Kisah eksil politik Indonesia di Paris.",
+    image: "https://placehold.co/150x200",
+  },
+  {
+    id: 8,
+    title: "Orang-Orang Biasa",
+    author: "Andrea Hirata",
+    year: 2019,
+    description: "Cerita satir penuh humor tentang kehidupan orang kecil.",
+    image: "https://placehold.co/150x200",
+  },
+  {
+    id: 9,
+    title: "Cantik Itu Luka",
+    author: "Eka Kurniawan",
+    year: 2002,
+    description: "Novel magis tentang kehidupan perempuan dan sejarah Indonesia.",
+    image: "https://placehold.co/150x200",
+  },
+];
+
+export default books;
